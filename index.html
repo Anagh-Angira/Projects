@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Porfolio | Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+
+            </nav>
+
+            <div class="header-text">
+                <p>Frontend | Java Developer</p>
+                <h1>Hi, I'am <span>Anagh Angira</span> <br> From Ranchi</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <!---------------- AboutCode ------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio pariatur ullam quis quas
+                        incidunt maiores, ratione explicabo aliquam blanditiis id laborum quod rem nemo aut minus
+                        tempora perspiciatis dignissimos porro possimus nobis dicta saepe. Facere voluptatem est unde
+                        cupiditate architecto! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+                        dolore facere autem quae amet tenetur ad nihil, similique at molestiae blanditiis sed eum iste
+                        hic assumenda debitis itaque reiciendis incidunt?
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Frontend</span><br>Web Developer interface.</li>
+                            <li><span>Backend</span><br>Web Developer.</li>
+                            <li><span>Java</span><br>Spring Boot Technology.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2020-2022</span><br>Give Training to Industrial Experts</li>
+                            <li><span>2022-23</span><br>Hands-on Experience.</li>
+                            <li><span>2023-24</span><br>Developer at ITER S'O'A as Senior Engineer </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>Pass class 10 <sup>th</sup> from DAV Patratu</li>
+                            <li><span>2020</span><br>Pass class 12 <sup>th</sup> from DAV Gandhinagar</li>
+                            <li><span>2024</span><br>Pass Bachelor from S'O'A University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
